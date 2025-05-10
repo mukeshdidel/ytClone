@@ -1,5 +1,5 @@
 import '../styles/navbar.css'
-import react, { StrictMode } from 'react';
+import react from 'react';
 import menuIcon from '../assets/menu.png'
 import logo from '../assets/logo.png'
 import searchIcon from '../assets/search.png'
@@ -7,17 +7,16 @@ import uploadIcon from '../assets/upload.png'
 import moreIcon from '../assets/more.png'
 import notificationIcon from '../assets/notification.png'
 import profileIcon from '../assets/jack.png'
+import {Link} from 'react-router-dom'
+
 export default function Navbar({setSidebar}){
-
-
-
     
     return (
         <>
         <nav className='flex-div'>
             <div className='nav-left flex-div'>
                 <img src={menuIcon} alt="" onClick={()=>{setSidebar(prev => !prev)}} />
-                <img className='logo' src={logo} alt="" />
+                <Link to={'/'}><img className='logo' src={logo} alt="" /></Link>
             </div>
 
             <div className='nav-middle flex-div'>
